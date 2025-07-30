@@ -1,0 +1,52 @@
+# RStudio project files
+.Rproj.user/
+*.Rproj
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+
+# Environment files
+*.env
+*.Renviron
+*.Rprofile
+
+# Mac system files
+.DS_Store
+
+# Data (don't commit raw or processed datasets)
+data/raw/
+data/processed/
+*.csv
+*.xlsx
+*.rds
+*.feather
+
+# Output files
+*.pdf
+*.html
+*.docx
+*.png
+*.jpg
+
+# Cache and logs
+.Rcheck/
+__pycache__/
+*.log
+
+# Quarto / R Markdown caches
+_cache/
+*.utf8.md
+*.knit.md
+*.nb.html
+
+# Targets or renv (if used)
+.Rproj.user/
+renv/library_*/       # renv's project-specific packages
+renv/python/           # renv virtual environment
+renv/staging/
+targets/
+
+# VS Code or JetBrains IDE settings (if you ever use them)
+.vscode/
+.idea/
