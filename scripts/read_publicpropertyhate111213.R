@@ -5,5 +5,5 @@ library(tidyverse)
 library(readr)
 library(arrow)
 
-df <- read_csv("raw/publicpropertycrime111213.csv")  
-write_feather(df, "processed/publicpropertycrime111213.feather")
+df <- read_csv("raw/publicpropertyhate111213.csv")  
+write_feather(df, "processed/publicpropertyhate111213.feather")
