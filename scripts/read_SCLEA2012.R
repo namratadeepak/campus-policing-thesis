@@ -5,6 +5,6 @@ library(tidyverse)
 library(readr)
 library(arrow)
 
-load("raw/SCLEA 2012.rda")
+load("data/raw/SCLEA 2012.rda")
 df <- da36217.0001
-write_feather(df, "processed/SCLEA_2012.feather")
+arrow::write_feather(df, "data/processed/SCLEA_2012.feather")

@@ -5,5 +5,5 @@ library(tidyverse)
 library(readr)
 library(arrow)
 
-df <- read_csv("raw/Civilytics Campus Police Data (2016).csv")  
-write_feather(df, "processed/Civilytics_2016.feather")
+df <- read_csv("data/raw/Civilytics Campus Police Data (2016).csv")  
+arrow::write_feather(df, "data/processed/Civilytics_2016.feather")

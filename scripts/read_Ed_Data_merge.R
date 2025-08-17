@@ -4,26 +4,26 @@ library(purrr)
 library(stringr)
 
 filenames <- c(
-  "raw/residencehallhate111213.csv",
-  "raw/residencehalldiscipline111213.csv",
-  "raw/residencehallcrime111213.csv",
-  "raw/residencehallarrest111213.csv",
-  "raw/reportedhate111213.csv",
-  "raw/reporteddiscipline111213.csv",
-  "raw/reportedcrime111213.csv",
-  "raw/reportedarrest111213.csv",
-  "raw/publicpropertyhate111213.csv",
-  "raw/publicpropertydiscipline111213.csv",
-  "raw/publicpropertycrime111213.csv",
-  "raw/publicpropertyarrest111213.csv",
-  "raw/oncampushate111213.csv",
-  "raw/oncampusdiscipline111213.csv",
-  "raw/oncampuscrime111213.csv",
-  "raw/oncampusarrest111213.csv",
-  "raw/noncampushate111213.csv",
-  "raw/noncampusdiscipline111213.csv",
-  "raw/noncampuscrime111213.csv",
-  "raw/noncampusarrest111213.csv"
+  "data/raw/residencehallhate111213.csv",
+  "data/raw/residencehalldiscipline111213.csv",
+  "data/raw/residencehallcrime111213.csv",
+  "data/raw/residencehallarrest111213.csv",
+  "data/raw/reportedhate111213.csv",
+  "data/raw/reporteddiscipline111213.csv",
+  "data/raw/reportedcrime111213.csv",
+  "data/raw/reportedarrest111213.csv",
+  "data/raw/publicpropertyhate111213.csv",
+  "data/raw/publicpropertydiscipline111213.csv",
+  "data/raw/publicpropertycrime111213.csv",
+  "data/raw/publicpropertyarrest111213.csv",
+  "data/raw/oncampushate111213.csv",
+  "data/raw/oncampusdiscipline111213.csv",
+  "data/raw/oncampuscrime111213.csv",
+  "data/raw/oncampusarrest111213.csv",
+  "data/raw/noncampushate111213.csv",
+  "data/raw/noncampusdiscipline111213.csv",
+  "data/raw/noncampuscrime111213.csv",
+  "data/raw/noncampusarrest111213.csv"
 )
 
 ed_data <- map(filenames, ~ {
@@ -53,4 +53,7 @@ for (i in seq_along(ed_data)) {
   }
 }
 ed_data <- ed_data |> select(which(keep_cols))
-write_feather(ipeds_sclea, "merges/merged_Ed_Data_2012.feather")
+arrow::write_feather(ipeds_sclea, "data/merges/merged_Ed_Data_2012.feather")
+
+
+
