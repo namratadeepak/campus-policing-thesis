@@ -52,7 +52,10 @@ for (i in seq_along(ed_data)) {
     }
   }
 }
-ed_data <- ed_data |> select(which(keep_cols))
+
+ed_data <- ed_data |> select(which(keep_cols)) |>
+  mutate(IPEDS_ID = substr(ed_data[[1]], 1, 6))
+  
 arrow::write_feather(ed_data, "data/merges/merged_Ed_Data_2012.feather")
 
 
