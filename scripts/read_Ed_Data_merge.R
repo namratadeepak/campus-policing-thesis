@@ -53,7 +53,7 @@ for (i in seq_along(ed_data)) {
   }
 }
 ed_data <- ed_data |> select(which(keep_cols))
-arrow::write_feather(ipeds_sclea, "data/merges/merged_Ed_Data_2012.feather")
+arrow::write_feather(ed_data, "data/merges/merged_Ed_Data_2012.feather")
 
 
 

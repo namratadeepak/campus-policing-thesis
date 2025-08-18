@@ -8,8 +8,7 @@ ipeds_sclea <- read_feather("data/merges/merged_SCLEA_IPEDS.feather")
 
 
 # prep ipeds_sclea for merge
-ipeds_sclea <- ipeds_sclea |>
-  mutate(IPEDS_ID = as.character(IPEDS_ID))
+ipeds_sclea <- mutate(IPEDS_ID = as.character(IPEDS_ID))
 
 # merge
 ed_sclea_ipeds <- full_join(ipeds_sclea, ed_data, by = "IPEDS_ID")
