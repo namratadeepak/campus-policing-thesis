@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-# Always run from this file's directory
 cd "$(dirname "$0")"
 
-echo "==> Pulling LFS data"
 git lfs install --local
 git lfs pull
 
@@ -19,5 +17,7 @@ Rscript scripts/read_Ed_Data_merge.R
 Rscript scripts/read_IPEDS_SCLEA_merge.R
 Rscript scripts/read_Ed_SCLEA_IPEDS_merge.R
 Rscript scripts/read_Civilytics_Ed_SCLEA_IPEDS.R
+Rscript scripts/read_UCR.R
+Rscript scripts/merge_UCR_Civilytics_Ed_IPEDS_SCLEA.R
 
 echo "==> Done"
