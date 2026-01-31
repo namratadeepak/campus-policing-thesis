@@ -23,4 +23,4 @@ library("tidylog", warn.conflicts = FALSE)
 ipeds_sclea <- full_join(sclea, ipeds, by = "IPEDS_ID")
 
 # save merged file
-arrow::write_feather(ipeds_sclea, "data/merges/merged_SCLEA_IPEDS.feather")
+arrow::write_feather(ipeds_sclea, "data/merges/merged_SCLEA_IPEDS_2012.feather")
