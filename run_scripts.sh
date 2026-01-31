@@ -13,11 +13,11 @@ echo "==> Running pipeline"
 Rscript scripts/read_SCLEA2012.R
 Rscript scripts/read_IPEDSdata2012.R
 Rscript scripts/read_Civilytics2016.R
-Rscript scripts/read_Ed_Data_merge.R
-Rscript scripts/read_IPEDS_SCLEA_merge.R
-Rscript scripts/read_Ed_SCLEA_IPEDS_merge.R
-Rscript scripts/read_Civilytics_Ed_SCLEA_IPEDS.R
-Rscript scripts/read_UCR.R
-Rscript scripts/merge_UCR_Civilytics_Ed_IPEDS_SCLEA.R
+Rscript scripts/read_Ed_Data_2012_merge.R
+Rscript scripts/read_IPEDS_SCLEA_2012_merge.R
+Rscript scripts/read_Ed_SCLEA_IPEDS_2012_merge.R
+Rscript scripts/read_Civilytics_Ed_SCLEA_IPEDS_2012.R
+Rscript scripts/read_UCR_2012.R
+Rscript scripts/merge_UCR_Civilytics_Ed_IPEDS_SCLEA_2012.R
 
 echo "==> Done"
